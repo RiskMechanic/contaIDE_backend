@@ -18,5 +18,9 @@ Progettato per essere **robusto, auditable e estendibile**.
 
 ---
 
-## 📂 Project Structure
+## ⚙️ Requirements
+
+- Python 3.11+ (testato anche su 3.14)
+- SQLite (integrato)
+- [pytest](https://docs.pytest.org/) per test
 
