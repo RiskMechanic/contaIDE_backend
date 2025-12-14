@@ -1,0 +1,62 @@
+INSERT INTO accounts (code, name, class, parent_code) VALUES
+-- Attività (A)
+('1000', 'ATTIVO', 'A', NULL),
+('1100', 'Immobilizzazioni immateriali', 'A', '1000'),
+('1110', 'Software e brevetti', 'A', '1100'),
+('1120', 'Avviamento', 'A', '1100'),
+('1200', 'Immobilizzazioni materiali', 'A', '1000'),
+('1210', 'Fabbricati', 'A', '1200'),
+('1220', 'Impianti e macchinari', 'A', '1200'),
+('1230', 'Attrezzature', 'A', '1200'),
+('1300', 'Immobilizzazioni finanziarie', 'A', '1000'),
+('1310', 'Partecipazioni', 'A', '1300'),
+('1320', 'Titoli a lungo termine', 'A', '1300'),
+('1400', 'Attivo circolante', 'A', '1000'),
+('1410', 'Crediti verso clienti', 'A', '1400'),
+('1411', 'IVA a credito', 'A', '1410'),
+('1420', 'Rimanenze', 'A', '1400'),
+('1430', 'Disponibilità liquide', 'A', '1400'),
+('1431', 'Cassa', 'A', '1430'),
+('1432', 'Banca c/c', 'A', '1430'),
+
+-- Passività (P)
+('2000', 'PASSIVO', 'P', NULL),
+('2100', 'Patrimonio netto', 'P', '2000'),
+('2110', 'Capitale sociale', 'P', '2100'),
+('2120', 'Riserve', 'P', '2100'),
+('2130', 'Utile/Perdita di esercizio', 'P', '2100'),
+('2200', 'Fondi rischi e oneri', 'P', '2000'),
+('2300', 'Debiti', 'P', '2000'),
+('2310', 'Debiti verso fornitori', 'P', '2300'),
+('2320', 'Debiti tributari', 'P', '2300'),
+('2321', 'IVA a debito', 'P', '2320'),
+('2322', 'Ritenute fiscali da versare', 'P', '2320'),
+('2330', 'Debiti finanziari', 'P', '2300'),
+('2340', 'Mutui passivi', 'P', '2330'),
+
+-- Costi (C)
+('3000', 'COSTI', 'C', NULL),
+('3100', 'Acquisti di materie prime e merci', 'C', '3000'),
+('3200', 'Costi per servizi', 'C', '3000'),
+('3210', 'Consulenze', 'C', '3200'),
+('3220', 'Spese di trasporto', 'C', '3200'),
+('3300', 'Costi per il personale', 'C', '3000'),
+('3310', 'Stipendi e salari', 'C', '3300'),
+('3320', 'Contributi previdenziali', 'C', '3300'),
+('3330', 'TFR', 'C', '3300'),
+('3400', 'Ammortamenti e svalutazioni', 'C', '3000'),
+('3500', 'Oneri finanziari', 'C', '3000'),
+('3600', 'Imposte e tasse', 'C', '3000'),
+
+-- Ricavi (R)
+('4000', 'RICAVI', 'R', NULL),
+('4100', 'Vendite e prestazioni', 'R', '4000'),
+('4200', 'Altri ricavi e proventi', 'R', '4000'),
+('4300', 'Proventi finanziari', 'R', '4000'),
+('4400', 'Plusvalenze', 'R', '4000'),
+
+-- Conti d\'ordine (O)
+('5000', 'CONTI D ORDINE', 'A', NULL),
+('5100', 'Garanzie prestate', 'A', '5000'),
+('5200', 'Garanzie ricevute', 'P', '5000'),
+('5300', 'Beni di terzi presso la azienda', 'A', '5000');
